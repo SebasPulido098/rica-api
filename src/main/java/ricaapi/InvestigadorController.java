@@ -1,4 +1,4 @@
-package rica_api;
+package ricaapi;
 
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

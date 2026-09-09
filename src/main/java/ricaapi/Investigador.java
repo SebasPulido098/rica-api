@@ -1,21 +1,28 @@
-package rica_api;
+package ricaapi;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-
-public class InvestigadorRequest {
-
-    @NotBlank(message = "El nombre completo es obligatorio")
+public class Investigador {
+    
+    private Long id;
     private String nombreCompleto;
-
-    @NotBlank(message = "El correo institucional es obligatorio")
-    @Email(message = "El correo institucional debe tener un formato válido")
     private String correoInstitucional;
-
-    @NotBlank(message = "El grupo de investigación es obligatorio")
     private String grupoInvestigacion;
 
-    public InvestigadorRequest() {
+    public Investigador() {
+    }
+
+    public Investigador(Long id, String nombreCompleto, String correoInstitucional, String grupoInvestigacion) {
+        this.id = id;
+        this.nombreCompleto = nombreCompleto;
+        this.correoInstitucional = correoInstitucional;
+        this.grupoInvestigacion = grupoInvestigacion;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombreCompleto() {
@@ -41,5 +48,4 @@ public class InvestigadorRequest {
     public void setGrupoInvestigacion(String grupoInvestigacion) {
         this.grupoInvestigacion = grupoInvestigacion;
     }
-
 }

@@ -1,4 +1,4 @@
-package rica_api;
+package ricaapi;
 
 public class RecursoNoEncontradoException extends RuntimeException {
 

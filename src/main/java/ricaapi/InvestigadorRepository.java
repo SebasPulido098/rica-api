@@ -1,4 +1,4 @@
-package rica_api;
+package ricaapi;
 
 import java.util.List;
 import java.util.Optional;
