@@ -1,4 +1,4 @@
-package ricaapi;
+package ricaapi.publicaciones;
 
 /**
  * PublicacionMapper

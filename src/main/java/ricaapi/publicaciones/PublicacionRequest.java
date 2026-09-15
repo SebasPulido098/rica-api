@@ -1,14 +1,11 @@
-package ricaapi;
-
-
+package ricaapi.publicaciones;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Map;
 
 @Document(collection = "publicaciones")
-public class Publicacion {
-
+public class PublicacionRequest {
     @Id
     private String id;
 
@@ -17,8 +14,15 @@ public class Publicacion {
     private String tipo;
     private Integer anio;
     private Map<String, String> detalles;
-
-    public Publicacion() {
+    
+    public PublicacionRequest(String id, String investigadorCorreo, String titulo, String tipo, Integer anio,
+            Map<String, String> detalles) {
+        this.id = id;
+        this.investigadorCorreo = investigadorCorreo;
+        this.titulo = titulo;
+        this.tipo = tipo;
+        this.anio = anio;
+        this.detalles = detalles;
     }
 
     public String getId() {
@@ -69,6 +73,6 @@ public class Publicacion {
         this.detalles = detalles;
     }
 
+
     
-    // ... getters y setters de cada atributo
 }

@@ -1,4 +1,4 @@
-package ricaapi;
+package ricaapi.investigadores;
 
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
