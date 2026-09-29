@@ -1,4 +1,6 @@
-package ricaapi.investigadores;
+package ricaapi.investigadores.aplicacion;
+
+import ricaapi.investigadores.dominio.CorreoDuplicadoException;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +17,7 @@ import static org.mockito.Mockito.when;
 class InvestigadorServiceTest {
 
     @Mock
-    private InvestigadorRepository investigadorRepository;
+    private RepositorioInvestigadores repositorioInvestigadores;
 
     @Mock
     private InvestigadorFactory investigadorFactory;
@@ -36,6 +38,6 @@ class InvestigadorServiceTest {
                 nombreCompleto, correoInstitucional, grupoInvestigacion));
 
         verify(investigadorFactory).crear(nombreCompleto, correoInstitucional, grupoInvestigacion);
-        verifyNoInteractions(investigadorRepository);
+        verifyNoInteractions(repositorioInvestigadores);
     }
 }

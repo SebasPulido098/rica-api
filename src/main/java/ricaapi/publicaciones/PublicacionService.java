@@ -3,7 +3,7 @@ package ricaapi.publicaciones;
 import org.springframework.stereotype.Service;
 
 import ricaapi.compartido.RecursoNoEncontradoException;
-import ricaapi.investigadores.InvestigadorRepository;
+import ricaapi.investigadores.infraestructura.salida.persistencia.InvestigadorRepository;
 
 import java.util.List;
 
