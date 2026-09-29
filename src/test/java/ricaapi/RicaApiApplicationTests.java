@@ -1,4 +1,4 @@
-package rica_api;
+package ricaapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
